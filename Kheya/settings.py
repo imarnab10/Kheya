@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-kmx^iu52_u10!8+_ci#eh8nt$uc9rweytxmgzmc@!(5p%-sbvp'
 # 'django-insecure-kmx^iu52_u10!8+_ci#eh8nt$uc9rweytxmgzmc@!(5p%-sbvp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -78,11 +78,15 @@ WSGI_APPLICATION = 'Kheya.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3il4l6hnv042o',
+        'HOST': 'ec2-54-163-254-204.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'xndspipcvyqttz',
+        'PASSWORD': '65b128d98f699baf258c5cb8395693626a6828b43c70b797cf1d92030ab54f73',
     }
 }
-
+# postgres: // xndspipcvyqttz: 65b128d98f699baf258c5cb8395693626a6828b43c70b797cf1d92030ab54f73@ec2-54-163-254-204.compute-1.amazonaws.com: 5432/d3il4l6hnv042o
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
