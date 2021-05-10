@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kmx^iu52_u10!8+_ci#eh8nt$uc9rweytxmgzmc@!(5p%-sbvp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://kheya.herokuapp.com/", "localhost"]
 
 
 # Application definition
