@@ -41,19 +41,21 @@ class UserModel(models.Model):
         ('Risita', 'RISITA')
     ]
     location = models.CharField(max_length=50)
-    contactno = models.IntegerField()
-    facility_type = models.CharField(max_length=15, choices=facility_choices, default=None)
-    avail_type = models.CharField(max_length=21, choices=avail_choices, default='SELECT')
-    ver_type = models.CharField(max_length=20, choices=ver_choices, default='SELECT')
+    contactno = models.BigIntegerField()
+    facility_type = models.CharField(
+        max_length=15, choices=facility_choices, default=None)
+    avail_type = models.CharField(
+        max_length=21, choices=avail_choices, default='SELECT')
+    ver_type = models.CharField(
+        max_length=20, choices=ver_choices, default='SELECT')
     remarks = models.TextField(max_length=200, blank=True, null=True)
-    ver_done_by = models.CharField(max_length=15, choices=ver_done_by_choices, default='SELECT')
+    ver_done_by = models.CharField(
+        max_length=15, choices=ver_done_by_choices, default='SELECT')
     is_approved = models.BooleanField(default=False)
     date = models.DateTimeField(default=now)
 
     def __str__(self):
         return self.facility_type
-
-
 
     @staticmethod
     def get_all_oxygen():
