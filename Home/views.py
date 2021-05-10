@@ -9,7 +9,7 @@ from .models import UserModel
 # class UserInput(View):
 #     def get(self, request):
 #         form = UserForm()
-#         return render(request, 'index.html', {'form': form})
+#         return render(request, 'user_input.html', {'form': form})
 #
 #     def post(self, request):
 #         form = UserForm(request.POST)
@@ -49,7 +49,55 @@ def product_detail_view(request):
         'ambulances': ambulances,
         'medicines': medicines,
     }
-    return render(request, "products.html", data)
+    return render(request, "oxygens.html", data)
+
+
+def oxygen_view(request):
+    oxygens = UserModel.get_all_oxygen()
+    data = {
+        'oxygens': oxygens,
+    }
+    return render(request, "oxygens.html", data)
+
+
+def bed_view(request):
+    covidbeds = UserModel.get_all_covidbed()
+    data = {
+        'covidbeds': covidbeds,
+    }
+    return render(request, "beds.html", data)
+
+
+def test_view(request):
+    covidtests = UserModel.get_all_covidtest()
+    data = {
+        'covidtests': covidtests,
+    }
+    return render(request, "covidtests.html", data)
+
+
+def doctor_view(request):
+    doconcalls = UserModel.get_all_doconcall()
+    data = {
+        'doconcalls': doconcalls,
+    }
+    return render(request, "doctors.html", data)
+
+
+def ambulance_view(request):
+    ambulances = UserModel.get_all_ambulance()
+    data = {
+        'ambulances': ambulances,
+    }
+    return render(request, "ambulances.html", data)
+
+
+def food_view(request):
+    foods = UserModel.get_all_food()
+    data = {
+        'foods': foods,
+    }
+    return render(request, "foods.html", data)
 
 
 def user_input(request):
@@ -65,4 +113,8 @@ def user_input(request):
         return HttpResponseRedirect('/product_view/')
 
     context['form'] = form
-    return render(request, "index.html", context)
+    return render(request, "user_input.html", context)
+
+
+def index(request):
+    return render(request, "index.html")
