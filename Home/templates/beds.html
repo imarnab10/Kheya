@@ -12,6 +12,7 @@
       <table class="table table-striped">
       <thead>
         <tr>
+          <th scope="col">Organization Name</th>
           <th scope="col">Location</th>
           <th scope="col">Contact No.</th>
           <th scope="col">Available Type</th>
@@ -21,6 +22,7 @@
     {% for covidbed in covidbeds %}
           <tbody>
             <tr>
+              <td>{{covidbed.org}}</td>
               <td>{{covidbed.location}}</td>
               <td>{{covidbed.contactno}}</td>
               <td>{{covidbed.avail_type}}</td>
