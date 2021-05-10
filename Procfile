@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT Kheya.wsgi:application
+web: waitress-serve --port=8000 Kheya.wsgi:application
