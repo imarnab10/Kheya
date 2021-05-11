@@ -42,7 +42,7 @@ class UserModel(models.Model):
     ]
     location = models.CharField(max_length=50)
     contactno = models.BigIntegerField()
-    organization = models.CharField(max_length=50, default='Kheya')
+    organization = models.CharField(max_length=50, default=None)
     facility_type = models.CharField(
         max_length=15, choices=facility_choices, default=None)
     avail_type = models.CharField(
