@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Title</title>
+    <style>
+      td,th{
+        font-size:25px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .navbar{
+        height: 100px;
+        background-color: #FFE4E1;
+        padding: 10px;
+    }
+    .card-header{
+      font-size: 25px;
+      background-color: #DEB887;
+    }
+    .card{
+      padding:10px;
+    }
+    .card-body{
+      font-size: 20px;
+      background-color: #FFFAF0;
+      font-family: "Times New Roman", Times, serif;
+    }
+    </style>
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  <div class="container">
+  {% load static %}
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'Home/KheyaLogo.jpeg' %}" width="80" height="80" alt="">
+      </a>
+
+        <a href="/admin">
+            <div class="text-center">
+            <img src="{% static 'Home/AdminIcon.png' %}" width="40" height="40" alt="">
+                <h5>Admin</h5>
+            </div>
+        </a>
+    </nav>
+  <!--
+    <div class="container">
       <table class="table table-striped">
       <thead>
         <tr>
@@ -30,6 +67,103 @@
             {% endfor %}
       </table>
   </div>
+-->
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card text-center">
+      <div class="card-header">
+        Monday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. SUJAN DAS</h5>
+        <p class="card-text">7001771957<br>Time: 2:00pm to 6:00pm</p>
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card text-center">
+      <div class="card-header">
+        Tuesday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Shirshendu Basu</h5>
+        <p class="card-text">8250711152<br>Time: 2:00pm to 6:00pm</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card text-center">
+      <div class="card-header">
+        Wednesday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Mainak Ghosh</h5>
+        <p class="card-text">8348962221<br>Time: 10:00am to 8:00pm</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card text-center">
+      <div class="card-header">
+        Thursday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Shirshendu Basu</h5>
+        <p class="card-text">8250711152<br>Time: 2:00pm to 6:00pm</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Amit Mandal</h5>
+        <p class="card-text">+913217796414<br>Time: 6:00pm to 9:00pm</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center">
+      <div class="card-header">
+        Friday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Saheli Chandra</h5>
+        <p class="card-text">7890816588<br>Time: 10:00am to 12:00pm</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Titli Ghosh</h5>
+        <p class="card-text">6290083465<br>Time: 6:00pm to 9:00pm</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center">
+      <div class="card-header">
+        Saturday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Arthik Chattopadhyay</h5>
+        <p class="card-text">7980484080<br>Time: 10:00am to 2:00pm</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Saheli Chandra</h5>
+        <p class="card-text">7890816588<br>Time: 4:00pm to 6:00pm</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center">
+      <div class="card-header">
+        Sunday
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Tanmay Mondal</h5>
+        <p class="card-text">7797277007<br>Time: 3:00pm to 6:00pm</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
 </body>
 </html>
