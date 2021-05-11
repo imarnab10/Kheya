@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Title</title>
+    <title>Covid Bed</title>
     <style>
-      td,th{
+      span,td,th{
         font-size:25px;
         font-family: "Times New Roman", Times, serif;
       }
@@ -24,7 +24,7 @@
       <a class="navbar-brand" href="/">
         <img src="{% static 'Home/KheyaLogo.jpeg' %}" width="80" height="80" alt="">
       </a>
-
+      <span>CovidBed Details</span>
         <a href="/admin">
             <div class="text-center">
             <img src="{% static 'Home/AdminIcon.png' %}" width="40" height="40" alt="">
@@ -32,12 +32,12 @@
             </div>
         </a>
     </nav>
-  
+    
     <div>
       <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Organization Name</th>
+          <th scope="col">Organization's Name/Contact Person</th>
           <th scope="col">Location</th>
           <th scope="col">Contact No.</th>
           <th scope="col">Available Type</th>
